@@ -1,0 +1,196 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+/* Styling untuk logo PustakaKu di navbar */
+.navbar-brand {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Styling untuk link navbar lainnya */
+.nav-link {
+  font-family: Arial, sans-serif;
+}
+
+/* Import Google Font untuk Selamat Datang */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+
+/* Styling untuk jumbotron */
+.jumbotron {
+  padding-top: 10rem;
+  background-color: #ffdeea;
+}
+
+/* Styling khusus untuk text Selamat Datang */
+.jumbotron .display-4 {
+  font-family: "Playfair Display";
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* Styling untuk subtext dibawah Selamat Datang */
+.jumbotron .lead {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  color: #555555;
+}
+
+/* Import Google Font untuk Form Pembelian */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+
+/* Styling untuk section Orders */
+#Orders {
+  background-color: #a2d9ff; /* Warna biru untuk bagian orders */
+  padding: 5rem 0;
+}
+/* Styling khusus untuk judul Form Pembelian */
+#Orders h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+#Orders h2:after {
+  content: "";
+  display: block;
+  width: 100px;
+  margin: 10px auto;
+}
+
+/* Font default untuk seluruh body */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Membuat form lebih kontras dengan background */
+.form-control {
+  background-color: #ffffff;
+  border: 1px solid #80bdff;
+}
+
+/* Hover effect pada form input */
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+section {
+  padding-top: 5rem;
+}
+
+footer {
+  position: relative; /* Agar bisa menambahkan lapisan overlay */
+  background-image: url("footer\ background.jpg"); /* Menambahkan gambar sebagai latar belakang */
+  background-size: cover; /* Agar gambar mengisi seluruh area footer */
+  background-position: center; /* Posisi gambar di tengah */
+  padding: 2rem 0; /* Padding untuk memberikan ruang di sekitar konten */
+}
+
+footer::before {
+  content: ""; /* Membuat elemen pseudo */
+  position: absolute; /* Menempatkan overlay di atas background */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(249, 168, 168, 0.3); /* Overlay hitam dengan opacity rendah */
+  z-index: 1; /* Agar overlay berada di atas background */
+}
+
+footer p {
+  position: relative; /* Agar teks berada di atas overlay */
+  z-index: 2; /* Teks di atas overlay */
+  color: white; /* Pastikan teks terlihat dengan warna putih */
+  margin-bottom: 0.5rem;
+}
+
+footer .social-links {
+  display: flex;
+  align-items: center;
+  z-index: 2; /* Menjaga link sosial tetap terlihat di atas overlay */
+}
+
+/* Media query untuk tampilan mobile */
+@media (max-width: 768px) {
+  footer .col-md-3 {
+    text-align: center !important; /* Membuat semua konten center di mobile */
+    margin-bottom: 2rem;
+  }
+
+  footer .social-links {
+    justify-content: center;
+  }
+}
+
+/* Styling untuk bagian produk */
+#Products {
+  background-color: #f9f9f9;
+  padding: 4rem 0;
+}
+
+#Products h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+
+.product-card .card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.product-card .product-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.product-card .product-price {
+  font-family: "Arial", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.product-card .product-description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (min-width: 768px) {
+  .product-card {
+    max-width: 300px;
+    margin: auto;
+  }
+}
